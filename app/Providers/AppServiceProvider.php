@@ -25,5 +25,11 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
             Schema::defaultStringLength(191); //NEW: Increase StringLength
+            if (!strpos($this->app->request->getRequestUri(), 'admin') !== false) {
+                view()->composer('*', function ($view) {
+                    $categories  = \App\Category::get();
+                       $view->with('categories', $categories);
+                });
+            }
     }
 }

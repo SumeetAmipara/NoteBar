@@ -26,34 +26,33 @@
 
 
 </head>
+<style type="text/css">
+  #app #mainNav.is-fixed .navbar-brand , #app #mainNav.is-fixed .navbar-nav>li.nav-item>a
+  {
+    color: white!important;
+  }
+</style>
 <body>
     <div id="app">
         <!-- Navigation -->
-        <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top sticky-top" style="position: fixed;top: 0;width: 100%;background: #53595f;" id="mainNav">
         <div class="container">
-          <a class="navbar-brand" href="index.html">Start Bootstrap</a>
+          <a class="navbar-brand" href="\">Developer Notes</a>
           <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             Menu
             <i class="fas fa-bars"></i>
           </button>
           <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
-              <li class="nav-item">
-                <a class="nav-link" href="index.html">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="about.html">About</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="post.html">Sample Post</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="contact.html">Contact</a>
-              </li>
+              @foreach($categories as $category)
+                <li class="nav-item">
+                  <a class="nav-link" href="{{ url('category/'.$category->slug )}}">{{ $category->name }}</a>
+                </li>
+              @endforeach
             </ul>
           </div>
         </div>
-        </nav> 
+        </nav>
 
        <!--  <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
@@ -65,14 +64,14 @@
                 </button>
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    
+
                     <ul class="navbar-nav mr-auto">
 
                     </ul>
 
-                  
+
                     <ul class="navbar-nav ml-auto">
-                         
+
                         @guest
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
@@ -106,9 +105,9 @@
             </div>
         </nav> -->
 
-     
+
     @yield('content')
-       
+
 
 
     <!-- Footer -->

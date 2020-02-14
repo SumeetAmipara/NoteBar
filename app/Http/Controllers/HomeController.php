@@ -27,6 +27,7 @@ class HomeController extends Controller
     {
         /*$posts = Post::where("category_id",$Category->id)->get();
         return view('postlisting',["posts"=>$posts,"catname"=>$Category->name,"img"=>$posts[0]->image]);*/
-        return view('welcome');
+        $posts = Post::orderby('created_at','desc')->get();
+        return view('welcome',compact('posts'));
     }
 }

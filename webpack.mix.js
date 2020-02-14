@@ -12,4 +12,7 @@ const mix = require('laravel-mix');
  */
 
 mix.js('resources/js/app.js', 'public/js')
+	.js('resources/theme-assets/js/jquery.easing.min.js', 'public/js')
+	.js('resources/theme-assets/js/metisMenu.min.js', 'public/js')
+	.js('resources/theme-assets/js/jquery.app.js', 'public/js')
    .sass('resources/sass/app.scss', 'public/css');

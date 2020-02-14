@@ -1,5 +1,5 @@
 <?php
-
+// echo bcrypt('123456789');die;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -28,6 +28,10 @@ Auth::routes();
 
 Route::get('/', 'HomeController@index')->name('home');
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/articale/{slug}', 'HomeController@articale')->name('articale');
+
+
+
 // Route::get('post', function(){
 // 	$post = \App\Category::get();//where('slug', '=', $slug)->firstOrFail();
 // 	dd($post);

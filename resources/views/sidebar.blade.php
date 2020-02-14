@@ -14,7 +14,7 @@
                                         <div class="widget-title">About Me</div>
 
                                         <div class="text-center">
-                                            <img src="images/photo.jpg" alt="About Me" class="rounded-circle">
+                                            <img src="{{ asset('images/photo.jpg') }}" alt="About Me" class="rounded-circle">
 
                                             <p>Quis vero phasellus hac nullam, in quam vitae duis adipiscing mauris leo, laoreet eget at quis, ante vestibulum vivamus vel. Sapien lobortis, eget orci purus amet pede, consectetur neque risus.</p>
                                         </div>

@@ -34,7 +34,7 @@
                                         <h2 class="post-title"><a href="#">{{$post->title}}</a></h2>
                                         <ul class="post-meta">
                                             <li><i class="mdi mdi-calendar"></i>{{ date('d-m-Y', strtotime($post->create_at)) }}</li>
-                                            <li><i class="mdi mdi-tag-text-outline"></i> <a href="#">{{ $post->category->name }}</a> </li>
+                                            <li><i class="mdi mdi-tag-text-outline"></i> <a href="#">{ $post->category->name }</a> </li>
                                             <li><i class="mdi mdi-comment-multiple-outline"></i> <a href="#">3 Comments</a></li>
                                         </ul>
                                     </div>

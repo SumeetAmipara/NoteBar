@@ -4,7 +4,7 @@
                 <div class="slimscroll-menu" id="remove-scroll">
 
                     <div class="logo">
-                        <a href="index.html"><img src="images/logo.png" alt="" class="" style="height: 44px;"></a>
+                        <a href="index.html"><img src="{{ asset('images/logo.png')}}" alt="" class="" style="height: 44px;"></a>
                         <p class="text-muted">Graduating from the halls of the University Of Western Sydney in late 2011. </p>
                     </div>
 
